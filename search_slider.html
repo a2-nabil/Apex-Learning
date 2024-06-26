@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apex Learning some sections</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Slick Slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    />
+
+    <style>
+      *,
+      ::before,
+      :after {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Search area and Slider - started */
+      .dis-search-and-slider-wrapper {
+        max-width: 600px;
+        width: 100%;
+        background-color: #152132;
+        border-radius: 0.125rem;
+        padding: 24px;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .dis-search {
+        width: 100%;
+      }
+      .dis-search-and-slider-wrapper #search {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+      .dis-search input[type="text"] {
+        width: 100%;
+        border-radius: 0.125rem;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 0 15px;
+        margin: 0;
+        border: none !important;
+        outline: none;
+        color: #000 !important;
+        height: 56px;
+      }
+
+      .dis-search input[type="text"]:focus {
+        outline: 2px solid blue;
+      }
+
+      .dis-search button[type="submit"] {
+        background-color: rgb(169 246 123);
+        border-radius: 0.125rem;
+        font-weight: 500;
+        font-size: 16px;
+        color: #1a171b;
+        width: fit-content;
+        padding: 0 32px;
+        margin: 0;
+        margin-left: 2%;
+        cursor: pointer;
+        border: none;
+        white-space: nowrap;
+        height: 56px;
+      }
+
+      .dis-search button[type="submit"]:hover {
+        background-color: rgba(168, 246, 123, 0.897);
+      }
+
+      .dis-search button[type="submit"]:active {
+        outline: 9px solid rgba(168, 246, 123, 0.897);
+      }
+
+      .dis-slider {
+        margin-top: 19px;
+      }
+
+      .dis-slider a {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        white-space: nowrap;
+      }
+
+      .dis-slider a:hover {
+        color: #fff;
+      }
+
+      .dis-slider a::before {
+        content: "";
+        position: absolute;
+        top: 15%;
+        left: -1px;
+        width: 1px;
+        height: 16px;
+        background: #fff;
+      }
+
+      .dis-slider .slick-list {
+        width: 93% !important;
+        margin: auto !important;
+      }
+
+      .dis-slider .slick-arrow {
+        padding: 0;
+        border: none !important;
+        background-color: transparent !important;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+      }
+
+      .dis-slider .prev-arrow {
+        left: -3px;
+      }
+
+      .dis-slider .next-arrow {
+        right: 0;
+      }
+      @media (max-width: 1024px) {
+        .dis-search-and-slider-wrapper {
+          padding: 12px;
+        }
+        .dis-search button[type="submit"] {
+          font-size: 14px;
+          padding: 0 16px;
+          height: 40px;
+        }
+        .dis-search input[type="text"] {
+          height: 40px;
+        }
+        .dis-slider a {
+          font-size: 10px;
+        }
+      }
+      @media (max-width: 767px) {
+        .dis-search button[type="submit"] {
+          font-size: 12px;
+          padding: 0 16px;
+        }
+      }
+      /* Search area and Slider - ended */
+    </style>
+  </head>
+
+  <body>
+    <!-- Hero's search and slider part started -->
+    <div class="dis-search-and-slider-wrapper">
+      <div class="dis-search">
+        <form id="search" action="">
+          <input type="hidden" name="post_type" value="course" />
+
+          <input
+            type="text"
+            class="s"
+            id="s"
+            name="s"
+            placeholder="Subject or qualification, e.g. IT Course"
+            value=""
+          />
+
+          <button type="submit" class="sbtn">Search Courses</button>
+        </form>
+      </div>
+
+      <div class="dis-slider">
+        <a href="#" class="slider-item">Discount New</a>
+        <a href="#" class="slider-item">All Courses</a>
+        <a href="#" class="slider-item">Subscription</a>
+        <a href="#" class="slider-item">Career Bundle</a>
+        <a href="#" class="slider-item">Regulated</a>
+        <a href="#" class="slider-item">Student ID Card</a>
+        <a href="#" class="slider-item">Enjoy a 15% cash</a>
+      </div>
+    </div>
+    <!-- Hero's search and slider part ended -->
+
+    <!-- ----- All JavaScript files here ----- -->
+    <!-- jQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Slick Slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+    <!-- My custom JS -->
+    <script src="./custom.js"></script>
+  </body>
+</html>

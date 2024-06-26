@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>one</title>
+    <!-- google fonts link here  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom Css Link Here  -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <style>
+      *,
+      ::before,
+      :after {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 1472px;
+        margin: 0px auto;
+        padding: 32px;
+      }
+
+      /* courses css start  */
+      .a2n_bs-card {
+        position: relative;
+        width: 100%;
+        min-height: 190.312px;
+        height: 100%;
+        border-radius: 4px;
+        border: 1px solid rgb(237, 237, 237);
+        background: #fff;
+        padding: 8px 8px 8px 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 16px;
+        transition: all 0.3s ease;
+        overflow: hidden;
+      }
+      .a2n_bs-card .a2n_discount {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 71px;
+        height: 71px;
+      }
+      .a2n_bs-card .a2n_discount span {
+        position: absolute;
+        top: 20px;
+        left: 0px;
+        transform: rotate(-45deg);
+        z-index: 20;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .a2n_bs-card .a2n_heading {
+        text-decoration: none;
+        margin-top: 8px;
+        color: #373737;
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px;
+        text-transform: capitalize;
+        overflow: hidden;
+        height: 56px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        transition: all 0.3s ease;
+      }
+      .a2n_bs-card .a2n_heading:hover {
+        color: #00378b;
+      }
+      .a2n_bs-card .a2n_cat {
+        display: inline-block;
+        margin: 0;
+        border-radius: 4px;
+        padding: 8px 12px;
+        background: rgb(246, 246, 246);
+        color: #000;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        text-transform: capitalize;
+        transition: all 0.3s ease;
+      }
+
+      .a2n_bs-card .a2n_rating_sec {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        margin: 8px 0;
+      }
+
+      .a2n_bs-card .a2n_rating_sec p {
+        margin: 0;
+        color: #684e00;
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+      }
+
+      .a2n_bs-card .a2n_footer_content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 7px;
+      }
+
+      .a2n_bs-card .a2n_footer_content h4 {
+        margin: 0;
+        color: #00378b;
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 700;
+      }
+
+      .a2n_bs-card .a2n_footer_content h4 del {
+        color: #f4463c;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 500;
+        padding-left: 8px;
+      }
+
+      .a2n_bs-card .a2n_member {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+      }
+      .a2n_bs-card .a2n_member .members_icon {
+        background: rgb(230, 235, 243);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .a2n_bs-card .a2n_member p {
+        margin: 0;
+        color: #434144;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-transform: capitalize;
+      }
+
+      .a2n_content_sec {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: -webkit-fill-available;
+        height: 100%;
+        padding: 4px 24px 4px 0;
+      }
+
+      .a2n_image_sec {
+        width: 35%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .a2n_image_sec img {
+        width: 100%;
+        height: 100%;
+        border-radius: 2px;
+        object-fit: cover;
+      }
+
+      .a2n_offer-img {
+        width: 71px;
+        height: 71px !important;
+        object-fit: contain;
+      }
+
+      .a2n_cat-items {
+        display: flex;
+        gap: 4px;
+      }
+
+      .a2n_bs-btn {
+        color: #fff;
+        position: absolute;
+        top: 16px;
+        right: 8px;
+        z-index: 10;
+        font-size: 14px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+      .a2n_hover_card {
+        position: absolute;
+        right: -48px;
+        top: 4px;
+        transform-origin: bottom left;
+        height: 100%;
+        transition: all 0.2s ease-in;
+      }
+      .a2n_hover_card img {
+        width: 48px;
+        height: 100%;
+        object-fit: cover;
+      }
+      .a2n_bs-card:hover .a2n_hover_card {
+        transform: rotate(-12deg);
+      }
+
+      .a2n_bs-card:hover {
+        box-shadow: 0px 2px 4px -2px rgba(16, 24, 40, 0.06),
+          0px 4px 8px -2px rgba(16, 24, 40, 0.1);
+      }
+
+      .a2n_bs-card:hover .a2n_cat {
+        background: #e4fcd6;
+      }
+
+      .a2n_cat:hover {
+        text-decoration: underline;
+      }
+
+      .a2n-ratings-container,
+      .a2n-ratings-container .bp_filled_stars {
+        color: rgb(248, 186, 1);
+      }
+      .bp_filled_stars:before,
+      .bp_blank_stars:before {
+        font-size: 14px;
+        letter-spacing: 4px;
+      }
+      .a2n_courses-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        justify-content: center;
+        gap: 24px;
+      }
+      .a2n_gif_wrapper {
+        height: 100%;
+        min-height: 400px;
+        grid-row: span 2 / span 2;
+        grid-column: span 1 / span 1;
+      }
+      .a2n_gif_wrapper img {
+        border-radius: 4px;
+        width: 100%;
+        height: 100%;
+      }
+      @media (max-width: 1535px) {
+        .a2n_hover_card {
+          display: none;
+        }
+      }
+      @media (max-width: 1280px) {
+        .a2n_courses-container {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .a2n_bs-card .a2n_heading {
+          font-size: 12px;
+          line-height: 18px;
+          height: 36px;
+        }
+        .a2n_bs-card .a2n_cat {
+          padding: 2px 8px;
+          font-size: 10px;
+          font-weight: 400;
+          line-height: 18px;
+        }
+        .a2n_bs-card .a2n_footer_content h4 {
+          font-size: 12px;
+          line-height: 18px;
+        }
+        .a2n_bs-card .a2n_member p {
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+      @media (max-width: 767px) {
+        .a2n_courses-container {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        .a2n_gif_wrapper {
+          display: none;
+        }
+        .a2n_bs-card {
+          max-width: 474.672px;
+          margin: 0 auto;
+        }
+      }
+      /* courses css end  */
+    </style>
+  </head>
+
+  <body>
+    <div class="a2n_courses-container">
+      <div class="a2n_gif_wrapper">
+        <img
+          src="https://backend.apexlearning.org.uk/wp-content/uploads/2024/06/new-year.gif"
+          alt=""
+        />
+      </div>
+      <!-- #1 course start  -->
+      <div class="a2n_bs-card">
+        <div class="a2n_discount">
+          <span>93 % OFF</span>
+          <img
+            decoding="async"
+            src="https://backend.apexlearning.org.uk/wp-content/uploads/2024/06/corner-ribbon.svg"
+            alt=""
+            class="a2n_offer-img"
+          />
+        </div>
+        <div class="a2n_image_sec">
+          <a href="#">
+            <img
+              decoding="async"
+              src="https://www.apexlearning.org.uk/_next/image?url=https%3A%2F%2Fbackend.apexlearning.org.uk%2Fwp-content%2Fuploads%2F2022%2F03%2FCar-Mechanic-and-Repair-Training-Diploma.jpg&w=384&q=75"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="a2n_content_sec">
+          <div>
+            <div class="a2n_cat-items">
+              <a class="a2n_cat" href="#">Personal Development</a>
+            </div>
+            <a class="a2n_heading" href="#"
+              >Car Mechanic and Repair Training Diploma</a
+            >
+          </div>
+          <div>
+            <div class="a2n_rating_sec">
+              <p>5.0</p>
+              <div class="a2n-ratings-container bp_blank_stars">
+                <div style="width: 100%" class="bp_filled_stars"></div>
+              </div>
+            </div>
+            <div class="a2n_footer_content">
+              <h4>£24.99<del>£379.00</del></h4>
+              <div class="a2n_member">
+                <div class="members_icon">
+                  <svg
+                    class="text-neutral-600"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.80908 5.56418C8.57692 5.00419 9.07693 4.09791 9.07693 3.07692C9.07693 1.3803 7.69663 0 6.00001 0C4.30339 0 2.92309 1.3803 2.92309 3.07692C2.92309 4.09791 3.42308 5.00419 4.19094 5.56418C2.28219 6.29461 0.923096 8.14526 0.923096 10.3077C0.923096 11.2408 1.68226 12 2.6154 12H9.38462C10.3178 12 11.0769 11.2408 11.0769 10.3077C11.0769 8.14526 9.71783 6.29461 7.80908 5.56418ZM3.84617 3.07692C3.84617 1.8893 4.81238 0.923086 6.00001 0.923086C7.18763 0.923086 8.15385 1.8893 8.15385 3.07692C8.15385 4.26455 7.18763 5.23078 6.00001 5.23078C4.81238 5.23078 3.84617 4.26455 3.84617 3.07692ZM9.38462 11.0769H2.6154C2.19125 11.0769 1.84618 10.7318 1.84618 10.3077C1.84618 8.01722 3.70956 6.15382 6.00003 6.15382C8.29051 6.15382 10.1539 8.0172 10.1539 10.3077C10.1539 10.7318 9.80879 11.0769 9.38462 11.0769Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <p>342 Students</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="a2n_bs-btn"
+          ><i aria-hidden="true" class="fas fa-arrow-right"></i
+        ></a>
+        <div class="a2n_hover_card">
+          <img
+            src="https://backend.apexlearning.org.uk/wp-content/uploads/2024/06/card-hover-arrow.webp"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- #1 course end  -->
+      <!-- #2 course start  -->
+      <div class="a2n_bs-card">
+        <div class="a2n_discount">
+          <span>93 % OFF</span>
+          <img
+            decoding="async"
+            src="https://backend.apexlearning.org.uk/wp-content/uploads/2024/06/corner-ribbon.svg"
+            alt=""
+            class="a2n_offer-img"
+          />
+        </div>
+        <div class="a2n_image_sec">
+          <a href="#">
+            <img
+              decoding="async"
+              src="https://www.apexlearning.org.uk/_next/image?url=https%3A%2F%2Fbackend.apexlearning.org.uk%2Fwp-content%2Fuploads%2F2022%2F03%2FCar-Mechanic-and-Repair-Training-Diploma.jpg&w=384&q=75"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="a2n_content_sec">
+          <div>
+            <div class="a2n_cat-items">
+              <a class="a2n_cat" href="#">Personal Development</a>
+            </div>
+            <a class="a2n_heading" href="#"
+              >Car Mechanic and Repair Training Diploma</a
+            >
+          </div>
+          <div>
+            <div class="a2n_rating_sec">
+              <p>5.0</p>
+              <div class="a2n-ratings-container bp_blank_stars">
+                <div style="width: 100%" class="bp_filled_stars"></div>
+              </div>
+            </div>
+            <div class="a2n_footer_content">
+              <h4>£24.99<del>£379.00</del></h4>
+              <div class="a2n_member">
+                <div class="members_icon">
+                  <svg
+                    class="text-neutral-600"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.80908 5.56418C8.57692 5.00419 9.07693 4.09791 9.07693 3.07692C9.07693 1.3803 7.69663 0 6.00001 0C4.30339 0 2.92309 1.3803 2.92309 3.07692C2.92309 4.09791 3.42308 5.00419 4.19094 5.56418C2.28219 6.29461 0.923096 8.14526 0.923096 10.3077C0.923096 11.2408 1.68226 12 2.6154 12H9.38462C10.3178 12 11.0769 11.2408 11.0769 10.3077C11.0769 8.14526 9.71783 6.29461 7.80908 5.56418ZM3.84617 3.07692C3.84617 1.8893 4.81238 0.923086 6.00001 0.923086C7.18763 0.923086 8.15385 1.8893 8.15385 3.07692C8.15385 4.26455 7.18763 5.23078 6.00001 5.23078C4.81238 5.23078 3.84617 4.26455 3.84617 3.07692ZM9.38462 11.0769H2.6154C2.19125 11.0769 1.84618 10.7318 1.84618 10.3077C1.84618 8.01722 3.70956 6.15382 6.00003 6.15382C8.29051 6.15382 10.1539 8.0172 10.1539 10.3077C10.1539 10.7318 9.80879 11.0769 9.38462 11.0769Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <p>342 Students</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="a2n_bs-btn"
+          ><i aria-hidden="true" class="fas fa-arrow-right"></i
+        ></a>
+        <div class="a2n_hover_card">
+          <img
+            src="https://backend.apexlearning.org.uk/wp-content/uploads/2024/06/card-hover-arrow.webp"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- #2 course end  -->
+      <!-- #3 course start  -->
+      <div class="a2n_bs-card">
+        <div class="a2n_discount">
+          <span>93 % OFF</span>
+          <img
+            decoding="async"
+            src="https://backend.apexlearning.org.uk/wp-content/uploads/2024/06/corner-ribbon.svg"
+            alt=""
+            class="a2n_offer-img"
+          />
+        </div>
+        <div class="a2n_image_sec">
+          <a href="#">
+            <img
+              decoding="async"
+              src="https://www.apexlearning.org.uk/_next/image?url=https%3A%2F%2Fbackend.apexlearning.org.uk%2Fwp-content%2Fuploads%2F2022%2F03%2FCar-Mechanic-and-Repair-Training-Diploma.jpg&w=384&q=75"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="a2n_content_sec">
+          <div>
+            <div class="a2n_cat-items">
+              <a class="a2n_cat" href="#">Personal Development</a>
+            </div>
+            <a class="a2n_heading" href="#"
+              >Car Mechanic and Repair Training Diploma</a
+            >
+          </div>
+          <div>
+            <div class="a2n_rating_sec">
+              <p>5.0</p>
+              <div class="a2n-ratings-container bp_blank_stars">
+                <div style="width: 100%" class="bp_filled_stars"></div>
+              </div>
+            </div>
+            <div class="a2n_footer_content">
+              <h4>£24.99<del>£379.00</del></h4>
+              <div class="a2n_member">
+                <div class="members_icon">
+                  <svg
+                    class="text-neutral-600"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.80908 5.56418C8.57692 5.00419 9.07693 4.09791 9.07693 3.07692C9.07693 1.3803 7.69663 0 6.00001 0C4.30339 0 2.92309 1.3803 2.92309 3.07692C2.92309 4.09791 3.42308 5.00419 4.19094 5.56418C2.28219 6.29461 0.923096 8.14526 0.923096 10.3077C0.923096 11.2408 1.68226 12 2.6154 12H9.38462C10.3178 12 11.0769 11.2408 11.0769 10.3077C11.0769 8.14526 9.71783 6.29461 7.80908 5.56418ZM3.84617 3.07692C3.84617 1.8893 4.81238 0.923086 6.00001 0.923086C7.18763 0.923086 8.15385 1.8893 8.15385 3.07692C8.15385 4.26455 7.18763 5.23078 6.00001 5.23078C4.81238 5.23078 3.84617 4.26455 3.84617 3.07692ZM9.38462 11.0769H2.6154C2.19125 11.0769 1.84618 10.7318 1.84618 10.3077C1.84618 8.01722 3.70956 6.15382 6.00003 6.15382C8.29051 6.15382 10.1539 8.0172 10.1539 10.3077C10.1539 10.7318 9.80879 11.0769 9.38462 11.0769Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <p>342 Students</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="a2n_bs-btn"
+          ><i aria-hidden="true" class="fas fa-arrow-right"></i
+        ></a>
+        <div class="a2n_hover_card">
+          <img
+            src="https://backend.apexlearning.org.uk/wp-content/uploads/2024/06/card-hover-arrow.webp"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- #3 course end  -->
+      <!-- #4 course start  -->
+      <div class="a2n_bs-card">
+        <div class="a2n_discount">
+          <span>93 % OFF</span>
+          <img
+            decoding="async"
+            src="https://backend.apexlearning.org.uk/wp-content/uploads/2024/06/corner-ribbon.svg"
+            alt=""
+            class="a2n_offer-img"
+          />
+        </div>
+        <div class="a2n_image_sec">
+          <a href="#">
+            <img
+              decoding="async"
+              src="https://www.apexlearning.org.uk/_next/image?url=https%3A%2F%2Fbackend.apexlearning.org.uk%2Fwp-content%2Fuploads%2F2022%2F03%2FCar-Mechanic-and-Repair-Training-Diploma.jpg&w=384&q=75"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="a2n_content_sec">
+          <div>
+            <div class="a2n_cat-items">
+              <a class="a2n_cat" href="#">Personal Development</a>
+            </div>
+            <a class="a2n_heading" href="#"
+              >Car Mechanic and Repair Training Diploma</a
+            >
+          </div>
+          <div>
+            <div class="a2n_rating_sec">
+              <p>5.0</p>
+              <div class="a2n-ratings-container bp_blank_stars">
+                <div style="width: 100%" class="bp_filled_stars"></div>
+              </div>
+            </div>
+            <div class="a2n_footer_content">
+              <h4>£24.99<del>£379.00</del></h4>
+              <div class="a2n_member">
+                <div class="members_icon">
+                  <svg
+                    class="text-neutral-600"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.80908 5.56418C8.57692 5.00419 9.07693 4.09791 9.07693 3.07692C9.07693 1.3803 7.69663 0 6.00001 0C4.30339 0 2.92309 1.3803 2.92309 3.07692C2.92309 4.09791 3.42308 5.00419 4.19094 5.56418C2.28219 6.29461 0.923096 8.14526 0.923096 10.3077C0.923096 11.2408 1.68226 12 2.6154 12H9.38462C10.3178 12 11.0769 11.2408 11.0769 10.3077C11.0769 8.14526 9.71783 6.29461 7.80908 5.56418ZM3.84617 3.07692C3.84617 1.8893 4.81238 0.923086 6.00001 0.923086C7.18763 0.923086 8.15385 1.8893 8.15385 3.07692C8.15385 4.26455 7.18763 5.23078 6.00001 5.23078C4.81238 5.23078 3.84617 4.26455 3.84617 3.07692ZM9.38462 11.0769H2.6154C2.19125 11.0769 1.84618 10.7318 1.84618 10.3077C1.84618 8.01722 3.70956 6.15382 6.00003 6.15382C8.29051 6.15382 10.1539 8.0172 10.1539 10.3077C10.1539 10.7318 9.80879 11.0769 9.38462 11.0769Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <p>342 Students</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="a2n_bs-btn"
+          ><i aria-hidden="true" class="fas fa-arrow-right"></i
+        ></a>
+        <div class="a2n_hover_card">
+          <img
+            src="https://backend.apexlearning.org.uk/wp-content/uploads/2024/06/card-hover-arrow.webp"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- #4 course end  -->
+      <!-- #5 course start  -->
+      <div class="a2n_bs-card">
+        <div class="a2n_discount">
+          <span>93 % OFF</span>
+          <img
+            decoding="async"
+            src="https://backend.apexlearning.org.uk/wp-content/uploads/2024/06/corner-ribbon.svg"
+            alt=""
+            class="a2n_offer-img"
+          />
+        </div>
+        <div class="a2n_image_sec">
+          <a href="#">
+            <img
+              decoding="async"
+              src="https://www.apexlearning.org.uk/_next/image?url=https%3A%2F%2Fbackend.apexlearning.org.uk%2Fwp-content%2Fuploads%2F2022%2F03%2FCar-Mechanic-and-Repair-Training-Diploma.jpg&w=384&q=75"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="a2n_content_sec">
+          <div>
+            <div class="a2n_cat-items">
+              <a class="a2n_cat" href="#">Personal Development</a>
+            </div>
+            <a class="a2n_heading" href="#"
+              >Car Mechanic and Repair Training Diploma</a
+            >
+          </div>
+          <div>
+            <div class="a2n_rating_sec">
+              <p>5.0</p>
+              <div class="a2n-ratings-container bp_blank_stars">
+                <div style="width: 100%" class="bp_filled_stars"></div>
+              </div>
+            </div>
+            <div class="a2n_footer_content">
+              <h4>£24.99<del>£379.00</del></h4>
+              <div class="a2n_member">
+                <div class="members_icon">
+                  <svg
+                    class="text-neutral-600"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.80908 5.56418C8.57692 5.00419 9.07693 4.09791 9.07693 3.07692C9.07693 1.3803 7.69663 0 6.00001 0C4.30339 0 2.92309 1.3803 2.92309 3.07692C2.92309 4.09791 3.42308 5.00419 4.19094 5.56418C2.28219 6.29461 0.923096 8.14526 0.923096 10.3077C0.923096 11.2408 1.68226 12 2.6154 12H9.38462C10.3178 12 11.0769 11.2408 11.0769 10.3077C11.0769 8.14526 9.71783 6.29461 7.80908 5.56418ZM3.84617 3.07692C3.84617 1.8893 4.81238 0.923086 6.00001 0.923086C7.18763 0.923086 8.15385 1.8893 8.15385 3.07692C8.15385 4.26455 7.18763 5.23078 6.00001 5.23078C4.81238 5.23078 3.84617 4.26455 3.84617 3.07692ZM9.38462 11.0769H2.6154C2.19125 11.0769 1.84618 10.7318 1.84618 10.3077C1.84618 8.01722 3.70956 6.15382 6.00003 6.15382C8.29051 6.15382 10.1539 8.0172 10.1539 10.3077C10.1539 10.7318 9.80879 11.0769 9.38462 11.0769Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <p>342 Students</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="a2n_bs-btn"
+          ><i aria-hidden="true" class="fas fa-arrow-right"></i
+        ></a>
+        <div class="a2n_hover_card">
+          <img
+            src="https://backend.apexlearning.org.uk/wp-content/uploads/2024/06/card-hover-arrow.webp"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- #5 course end  -->
+      <!-- #6 course start  -->
+      <div class="a2n_bs-card">
+        <div class="a2n_discount">
+          <span>93 % OFF</span>
+          <img
+            decoding="async"
+            src="https://backend.apexlearning.org.uk/wp-content/uploads/2024/06/corner-ribbon.svg"
+            alt=""
+            class="a2n_offer-img"
+          />
+        </div>
+        <div class="a2n_image_sec">
+          <a href="#">
+            <img
+              decoding="async"
+              src="https://www.apexlearning.org.uk/_next/image?url=https%3A%2F%2Fbackend.apexlearning.org.uk%2Fwp-content%2Fuploads%2F2022%2F03%2FCar-Mechanic-and-Repair-Training-Diploma.jpg&w=384&q=75"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="a2n_content_sec">
+          <div>
+            <div class="a2n_cat-items">
+              <a class="a2n_cat" href="#">Personal Development</a>
+            </div>
+            <a class="a2n_heading" href="#"
+              >Car Mechanic and Repair Training Diploma</a
+            >
+          </div>
+          <div>
+            <div class="a2n_rating_sec">
+              <p>5.0</p>
+              <div class="a2n-ratings-container bp_blank_stars">
+                <div style="width: 100%" class="bp_filled_stars"></div>
+              </div>
+            </div>
+            <div class="a2n_footer_content">
+              <h4>£24.99<del>£379.00</del></h4>
+              <div class="a2n_member">
+                <div class="members_icon">
+                  <svg
+                    class="text-neutral-600"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.80908 5.56418C8.57692 5.00419 9.07693 4.09791 9.07693 3.07692C9.07693 1.3803 7.69663 0 6.00001 0C4.30339 0 2.92309 1.3803 2.92309 3.07692C2.92309 4.09791 3.42308 5.00419 4.19094 5.56418C2.28219 6.29461 0.923096 8.14526 0.923096 10.3077C0.923096 11.2408 1.68226 12 2.6154 12H9.38462C10.3178 12 11.0769 11.2408 11.0769 10.3077C11.0769 8.14526 9.71783 6.29461 7.80908 5.56418ZM3.84617 3.07692C3.84617 1.8893 4.81238 0.923086 6.00001 0.923086C7.18763 0.923086 8.15385 1.8893 8.15385 3.07692C8.15385 4.26455 7.18763 5.23078 6.00001 5.23078C4.81238 5.23078 3.84617 4.26455 3.84617 3.07692ZM9.38462 11.0769H2.6154C2.19125 11.0769 1.84618 10.7318 1.84618 10.3077C1.84618 8.01722 3.70956 6.15382 6.00003 6.15382C8.29051 6.15382 10.1539 8.0172 10.1539 10.3077C10.1539 10.7318 9.80879 11.0769 9.38462 11.0769Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <p>342 Students</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="a2n_bs-btn"
+          ><i aria-hidden="true" class="fas fa-arrow-right"></i
+        ></a>
+        <div class="a2n_hover_card">
+          <img
+            src="https://backend.apexlearning.org.uk/wp-content/uploads/2024/06/card-hover-arrow.webp"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- #6 course end  -->
+      <!-- #7 course start  -->
+      <div class="a2n_bs-card">
+        <div class="a2n_discount">
+          <span>93 % OFF</span>
+          <img
+            decoding="async"
+            src="https://backend.apexlearning.org.uk/wp-content/uploads/2024/06/corner-ribbon.svg"
+            alt=""
+            class="a2n_offer-img"
+          />
+        </div>
+        <div class="a2n_image_sec">
+          <a href="#">
+            <img
+              decoding="async"
+              src="https://www.apexlearning.org.uk/_next/image?url=https%3A%2F%2Fbackend.apexlearning.org.uk%2Fwp-content%2Fuploads%2F2022%2F03%2FCar-Mechanic-and-Repair-Training-Diploma.jpg&w=384&q=75"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="a2n_content_sec">
+          <div>
+            <div class="a2n_cat-items">
+              <a class="a2n_cat" href="#">Personal Development</a>
+            </div>
+            <a class="a2n_heading" href="#"
+              >Car Mechanic and Repair Training Diploma</a
+            >
+          </div>
+          <div>
+            <div class="a2n_rating_sec">
+              <p>5.0</p>
+              <div class="a2n-ratings-container bp_blank_stars">
+                <div style="width: 100%" class="bp_filled_stars"></div>
+              </div>
+            </div>
+            <div class="a2n_footer_content">
+              <h4>£24.99<del>£379.00</del></h4>
+              <div class="a2n_member">
+                <div class="members_icon">
+                  <svg
+                    class="text-neutral-600"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.80908 5.56418C8.57692 5.00419 9.07693 4.09791 9.07693 3.07692C9.07693 1.3803 7.69663 0 6.00001 0C4.30339 0 2.92309 1.3803 2.92309 3.07692C2.92309 4.09791 3.42308 5.00419 4.19094 5.56418C2.28219 6.29461 0.923096 8.14526 0.923096 10.3077C0.923096 11.2408 1.68226 12 2.6154 12H9.38462C10.3178 12 11.0769 11.2408 11.0769 10.3077C11.0769 8.14526 9.71783 6.29461 7.80908 5.56418ZM3.84617 3.07692C3.84617 1.8893 4.81238 0.923086 6.00001 0.923086C7.18763 0.923086 8.15385 1.8893 8.15385 3.07692C8.15385 4.26455 7.18763 5.23078 6.00001 5.23078C4.81238 5.23078 3.84617 4.26455 3.84617 3.07692ZM9.38462 11.0769H2.6154C2.19125 11.0769 1.84618 10.7318 1.84618 10.3077C1.84618 8.01722 3.70956 6.15382 6.00003 6.15382C8.29051 6.15382 10.1539 8.0172 10.1539 10.3077C10.1539 10.7318 9.80879 11.0769 9.38462 11.0769Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <p>342 Students</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="a2n_bs-btn"
+          ><i aria-hidden="true" class="fas fa-arrow-right"></i
+        ></a>
+        <div class="a2n_hover_card">
+          <img
+            src="https://backend.apexlearning.org.uk/wp-content/uploads/2024/06/card-hover-arrow.webp"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- #7 course end  -->
+    </div>
+
+    <!-- Js links Here  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- font awesome 5 here  -->
+    <script
+      src="https://kit.fontawesome.com/0793d75093.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
